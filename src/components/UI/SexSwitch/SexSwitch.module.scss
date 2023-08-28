@@ -1,0 +1,109 @@
+.sex {
+	&__switch {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		padding: 6px;
+
+		background: #f5f5f50d;
+		border-radius: 12px;
+
+		position: relative;
+
+		&Button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 10;
+			width: 74px;
+			height: 72px;
+			background: none;
+			position: relative;
+			svg {
+				height: 34px;
+				width: 34px;
+				color: rgba(255, 255, 255, 0.5);
+			}
+		}
+		&Active {
+			svg {
+				color: white;
+			}
+		}
+		span {
+			position: absolute;
+			top: 6px;
+			right: 6px;
+			width: 74px;
+			height: 72px;
+			background: #ff8a36;
+			box-shadow: 0 0 30px 0 #ff8a3680;
+			border-radius: 12px;
+
+			transition: transform 0.8s cubic-bezier(0, 0, 0, 1.23);
+
+			&.male {
+				transform: translate(-110.82%, 0);
+			}
+		}
+	}
+}
+
+@media (max-width: 1280px) {
+	.sex {
+		&__switch {
+			&Button {
+				width: 51.8px;
+				height: 50.4px;
+			}
+			span {
+				width: 51.8px;
+				height: 50.4px;
+				&.male {
+					transform: translate(-114%, 0);
+				}
+			}
+		}
+	}
+}
+@media (min-width: 2560px) {
+	.sex {
+		&__switch {
+			&Button {
+				width: 98.4px;
+				height: 95.7px;
+
+				svg {
+					transform: scale(1.33);
+				}
+			}
+			span {
+				width: 98.4px;
+				height: 95.7px;
+			}
+		}
+	}
+}
+
+@media (min-width: 3840px) {
+	.sex {
+		&__switch {
+			&Button {
+				width: 148px;
+				height: 144px;
+
+				svg {
+					transform: scale(2);
+				}
+			}
+			span {
+				width: 148px;
+				height: 144px;
+				&.male {
+					transform: translate(-104%, 0);
+				}
+			}
+		}
+	}
+}

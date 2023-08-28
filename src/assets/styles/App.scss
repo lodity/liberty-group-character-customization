@@ -1,0 +1,31 @@
+body {
+	font-family: 'Gilroy', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: normal;
+	color: #b9b9b9;
+	min-height: 100%;
+
+	overflow: hidden;
+}
+
+#root {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+
+	background: url('/src/assets/images/background-image.jpg') fixed center
+		no-repeat;
+	background-size: cover;
+}
+
+.App {
+	margin: 3.703vh;
+	width: 100%;
+	height: 92.594vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}

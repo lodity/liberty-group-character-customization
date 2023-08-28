@@ -1,0 +1,50 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 74px;
+	height: 72px;
+	border-radius: 12px;
+	background: rgba(245, 245, 245, 0.05);
+
+	transition: 0.8s cubic-bezier(0, 0, 0, 1.23);
+	transition-property: background-color, box-shadow;
+
+	svg {
+		position: absolute;
+		color: #bbbbbb;
+
+		transition: 0.8s cubic-bezier(0, 0, 0, 1.23);
+		transition-property: color;
+	}
+
+	&.active {
+		background: #ff8a36;
+		box-shadow: 0 0 20px 0 rgba(255, 138, 54, 0.5);
+		svg {
+			color: white;
+		}
+	}
+}
+
+@media (min-width: 2560px) {
+	.button {
+		width: 98.42px;
+		height: 95.76px;
+
+		svg {
+			transform: scale(1.33);
+		}
+	}
+}
+@media (min-width: 3840px) {
+	.button {
+		width: 147.6px;
+		height: 143.5px;
+
+		svg {
+			transform: scale(2);
+		}
+	}
+}

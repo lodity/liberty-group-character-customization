@@ -1,0 +1,87 @@
+.sex__switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px;
+  background: rgba(245, 245, 245, 0.0509803922);
+  border-radius: 12px;
+  position: relative;
+}
+.sex__switchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  width: 74px;
+  height: 72px;
+  background: none;
+  position: relative;
+}
+.sex__switchButton svg {
+  height: 34px;
+  width: 34px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.sex__switchActive svg {
+  color: white;
+}
+.sex__switch span {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 74px;
+  height: 72px;
+  background: #ff8a36;
+  box-shadow: 0 0 30px 0 rgba(255, 138, 54, 0.5019607843);
+  border-radius: 12px;
+  transition: transform 0.8s cubic-bezier(0, 0, 0, 1.23);
+}
+.sex__switch span.male {
+  transform: translate(-110.82%, 0);
+}
+
+@media (max-width: 1280px) {
+  .sex__switchButton {
+    width: 51.8px;
+    height: 50.4px;
+  }
+  .sex__switch span {
+    width: 51.8px;
+    height: 50.4px;
+  }
+  .sex__switch span.male {
+    transform: translate(-114%, 0);
+  }
+}
+@media (min-width: 2560px) {
+  .sex__switchButton {
+    width: 98.4px;
+    height: 95.7px;
+  }
+  .sex__switchButton svg {
+    transform: scale(1.33);
+  }
+  .sex__switch span {
+    width: 98.4px;
+    height: 95.7px;
+  }
+}
+@media (min-width: 3840px) {
+  .sex__switchButton {
+    width: 148px;
+    height: 144px;
+  }
+  .sex__switchButton svg {
+    transform: scale(2);
+  }
+  .sex__switch span {
+    width: 148px;
+    height: 144px;
+  }
+  .sex__switch span.male {
+    transform: translate(-104%, 0);
+  }
+}
+
+/*# sourceMappingURL=SexSwitch.module.css.map */

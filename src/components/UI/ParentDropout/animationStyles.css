@@ -1,0 +1,160 @@
+.dropdownBodyAnimation.entering {
+    pointer-events: none;
+    animation: show-dropdown .8s cubic-bezier(0, 0, 0, 1.23) forwards;
+}
+.dropdownBodyAnimation.exiting {
+    z-index: -1;
+    pointer-events: none;
+    animation: close-dropdown .8s ease-out forwards;
+}
+@keyframes show-dropdown {
+    0% {
+        opacity: 0;
+        transform: translateX(120%);
+        height: 59px;
+    }
+    100% {
+        height: 460px;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes close-dropdown {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+        height: 478px;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+        height: 59px;
+        transform: translateX(120%);
+    }
+}
+
+.header.entering{
+    animation: open-header .8s cubic-bezier(0, 0, 0, 1.23) forwards;
+    margin-bottom: 0;
+    padding: 0;
+    pointer-events: none;
+}
+.header.entered {
+    margin-bottom: 0;
+    padding: 0;
+}
+.header.exiting{
+    z-index: -1;
+    pointer-events: none;
+    animation: close-header .8s ease-out forwards;
+}
+
+@keyframes open-header {
+    0% {
+    	display: flex;
+    	align-items: center;
+    	justify-content: space-between;
+    	column-gap: 20.853vw;
+    	position: absolute;
+        top: -28px;
+    	opacity: 1;
+    	transform: translate(-120%, 33%);
+
+    }
+    50% {
+        opacity: 1;
+        margin-bottom: -100px;
+    }
+    99%{
+        position: absolute;
+        top: 0;
+    }
+    100% {
+    	transform: translate(0);
+        margin-bottom: 0;
+    }
+}
+@keyframes close-header {
+    0% {
+        transform: translate(0);
+        opacity: 1;
+    	display: flex;
+    	align-items: center;
+    	justify-content: space-between;
+    	column-gap: 20.853vw;
+    	position: absolute;
+        top: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-120%, 33%);
+        top: -28px;
+        position: absolute;
+    }
+}
+
+@media (min-width: 2560px) {
+    @keyframes show-dropdown {
+        0% {
+            opacity: 0;
+            transform: translateX(120%);
+            height: 77px;
+        }
+        100% {
+            height: 479px;
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes close-dropdown {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+            height: 503px;
+        }
+        50%{
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+            display: none;
+            height: 77px;
+            transform: translateX(120%);
+        }
+    }
+}
+@media (min-width: 3840px) {
+    @keyframes show-dropdown {
+        0% {
+            opacity: 0;
+            transform: translateX(120%);
+            height: 116px;
+        }
+        100% {
+            height: 918px;
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes close-dropdown {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+            height: 918px;
+        }
+        50%{
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+            display: none;
+            height: 116px;
+            transform: translateX(120%);
+        }
+    }
+}
