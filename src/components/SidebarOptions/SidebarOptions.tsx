@@ -1,6 +1,6 @@
 import classes from './SidebarOptions.module.css';
 import OptionsButton from './OptionsButton/OptionsButton';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ReactComponent as DNAIcon } from '../../assets/images/icons/dna.svg';
 import { ReactComponent as HeadIcon } from '../../assets/images/icons/head.svg';
 import { ReactComponent as MoustacheIcon } from '../../assets/images/icons/moustache.svg';
@@ -9,10 +9,6 @@ export type Options = 'dna' | 'head' | 'moustache';
 
 const SidebarOptions = () => {
 	const [selectedOption, setSelectedOption] = useState<Options>('dna');
-
-	useEffect(() => {
-		console.log(selectedOption);
-	}, [selectedOption]);
 
 	return (
 		<div className={classes.container}>
