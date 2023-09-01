@@ -170,6 +170,7 @@ input.supportSlider.right[type=range] {
 }
 
 .submitButton {
+  z-index: 2;
   align-self: center;
   display: flex;
   align-items: center;
@@ -274,6 +275,9 @@ input.supportSlider.right[type=range] {
     padding: 32px;
     font-size: 32px;
   }
+  .submitButton svg {
+    transform: rotate(-90deg) scale(1.33);
+  }
 }
 @media (min-width: 3840px) {
   .container {
@@ -335,6 +339,9 @@ input.supportSlider.right[type=range] {
   .submitButton {
     padding: 48px;
     font-size: 48px;
+  }
+  .submitButton svg {
+    transform: rotate(-90deg) scale(2);
   }
 }
 

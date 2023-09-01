@@ -22,92 +22,108 @@ const ParentDropout: FC<ParentDropoutProps> = ({
 	useEffect(() => {}, []);
 
 	return (
-		<div className={classes.main + (isOpen ? ' ' + classes.isOpen : '')}>
-			<Transition in={!isOpen} timeout={800} unmountOnExit mountOnEnter>
-				{(state) => (
-					<div className={classes.header + ' header ' + state}>
-						<h3 className={classes.title}>{title}</h3>
-						<button
-							className={classes.openButton}
-							type="button"
-							onClick={() => {
-								setIsOpen((prevState) => !prevState);
-							}}
-						>
-							<span>{selectedCharacter.name}</span>
-							<ArrowIcon />
-						</button>
-					</div>
-				)}
-			</Transition>
-
-			<Transition in={isOpen} timeout={800} unmountOnExit mountOnEnter>
-				{(state) => (
-					<div className={' dropdownBodyAnimation ' + state}>
-						<div
-							className={
-								classes.header + ' ' + classes.headerDropdown
-							}
-						>
+		<div>
+			<div
+				className={classes.main + (isOpen ? ' ' + classes.isOpen : '')}
+			>
+				<Transition
+					in={!isOpen}
+					timeout={800}
+					unmountOnExit
+					mountOnEnter
+				>
+					{(state) => (
+						<div className={classes.header + ' header ' + state}>
 							<h3 className={classes.title}>{title}</h3>
 							<button
-								type="button"
 								className={classes.openButton}
+								type="button"
 								onClick={() => {
 									setIsOpen((prevState) => !prevState);
 								}}
 							>
 								<span>{selectedCharacter.name}</span>
-								<ArrowIcon className={classes.close} />
+								<ArrowIcon />
 							</button>
 						</div>
-						<ul className={classes.charactersArea}>
-							{characters.map((character) => (
-								<li
-									key={character.name}
+					)}
+				</Transition>
+
+				<Transition
+					in={isOpen}
+					timeout={800}
+					unmountOnExit
+					mountOnEnter
+				>
+					{(state) => (
+						<div className={' dropdownBodyAnimation ' + state}>
+							<div
+								className={
+									classes.header +
+									' ' +
+									classes.headerDropdown
+								}
+							>
+								<h3 className={classes.title}>{title}</h3>
+								<button
+									type="button"
+									className={classes.openButton}
 									onClick={() => {
-										setSelectedCharacter(character);
-										setFormData((prevState) => ({
-											...prevState,
-											[title === 'Батько'
-												? 'father'
-												: 'mother']: character,
-										}));
-										setIsOpen(false);
+										setIsOpen((prevState) => !prevState);
 									}}
-									className={
-										classes.charactersArea__item +
-										(selectedCharacter.name ===
-										character.name
-											? ' ' +
-											  classes.charactersArea__itemActive
-											: '')
-									}
 								>
-									<div
+									<span>{selectedCharacter.name}</span>
+									<ArrowIcon className={classes.close} />
+								</button>
+							</div>
+							<ul className={classes.charactersArea}>
+								{characters.map((character) => (
+									<li
+										key={character.name}
+										onClick={() => {
+											setSelectedCharacter(character);
+											setFormData((prevState) => ({
+												...prevState,
+												[title === 'Батько'
+													? 'father'
+													: 'mother']: character,
+											}));
+											setIsOpen(false);
+										}}
 										className={
-											classes.charactersArea__itemFirstBackgroundBlur
+											classes.charactersArea__item +
+											(selectedCharacter.name ===
+											character.name
+												? ' ' +
+												  classes.charactersArea__itemActive
+												: '')
 										}
 									>
 										<div
 											className={
-												classes.charactersArea__itemSecondBackgroundBlur
+												classes.charactersArea__itemFirstBackgroundBlur
 											}
 										>
-											<img
-												src={character.src}
-												alt={character.name}
-											/>
+											<div
+												className={
+													classes.charactersArea__itemSecondBackgroundBlur
+												}
+											>
+												<img
+													src={character.src}
+													alt={character.name}
+												/>
+											</div>
 										</div>
-									</div>
-									<p>{character.name}</p>
-								</li>
-							))}
-						</ul>
-						<span className={classes.gradientLine} />
-					</div>
-				)}
-			</Transition>
+										<p>{character.name}</p>
+									</li>
+								))}
+							</ul>
+							<span className={classes.gradientLine} />
+						</div>
+					)}
+				</Transition>
+			</div>
 		</div>
 	);
 };
