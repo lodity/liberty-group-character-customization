@@ -52,7 +52,7 @@
 	align-items: flex-end;
 	justify-content: center;
 
-	height: 177px;
+	min-height: 177px;
 	padding-top: 19px;
 
 	border-radius: 8px;
@@ -220,7 +220,7 @@ input.supportSlider {
 		margin-bottom: 16.8px;
 	}
 	.parentLook {
-		height: 118.6px;
+		min-height: 118.6px;
 		padding-top: 1px;
 	}
 	.similarity {
@@ -250,7 +250,7 @@ input.supportSlider {
 		bottom: 50%;
 	}
 	.parentLook {
-		height: 235.4px;
+		min-height: 235.4px;
 		padding-top: 19px;
 
 		&::before {
@@ -324,7 +324,7 @@ input.supportSlider {
 		transform: translate(0, 50%) scale(2);
 	}
 	.parentLook {
-		height: 353px;
+		min-height: 353px;
 		padding-top: 28px;
 
 		&::before {

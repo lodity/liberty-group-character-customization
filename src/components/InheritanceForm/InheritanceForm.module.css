@@ -51,7 +51,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 177px;
+  min-height: 177px;
   padding-top: 19px;
   border-radius: 8px;
   background: rgba(245, 245, 245, 0.05);
@@ -203,7 +203,7 @@ input.supportSlider.right[type=range] {
     margin-bottom: 16.8px;
   }
   .parentLook {
-    height: 118.6px;
+    min-height: 118.6px;
     padding-top: 1px;
   }
   .similarity {
@@ -232,7 +232,7 @@ input.supportSlider.right[type=range] {
     bottom: 50%;
   }
   .parentLook {
-    height: 235.4px;
+    min-height: 235.4px;
     padding-top: 19px;
   }
   .parentLook::before {
@@ -297,7 +297,7 @@ input.supportSlider.right[type=range] {
     transform: translate(0, 50%) scale(2);
   }
   .parentLook {
-    height: 353px;
+    min-height: 353px;
     padding-top: 28px;
   }
   .parentLook::before {
