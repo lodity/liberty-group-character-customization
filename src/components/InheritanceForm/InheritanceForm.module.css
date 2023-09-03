@@ -209,6 +209,10 @@ input.supportSlider.right[type=range] {
     max-height: 118.6px;
     padding-top: 1px;
   }
+  .parentLook img {
+    width: auto;
+    max-height: 110px;
+  }
   .similarity {
     row-gap: 13.4px;
   }
